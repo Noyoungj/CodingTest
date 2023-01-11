@@ -10,12 +10,12 @@ import Foundation
 let N = Int(readLine()!)!
 let MAX = 100001
 
-var dp = [Int](repeating: 0, count: MAX)
+var dp = [Int](repeating: 0, count: N + 1)
 
 
 for i in 1...N {
     dp[i] = i
-    
+    print(dp)
     for j in 1...i {
         if i < j * j {
             break
