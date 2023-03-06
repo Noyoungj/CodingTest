@@ -7,10 +7,9 @@
 
 import Foundation
 
-let N = readLine()!.split(separator: " ").map{ Int($0)! }
+let N = 10 // 00001010
 
-print(N)
+print(N<<1) //16 + 4
+print(N>>1) // 4 + 1
 
-var arr = [Int](repeating: 0, count: 1)
 
-print(arr)
