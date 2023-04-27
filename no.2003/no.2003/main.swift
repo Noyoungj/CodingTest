@@ -19,20 +19,16 @@ var sum = 0
 var result = 0
 
 while true {
-    if r == N - 1 && l == N - 1 { break}
-    if sum < M {
-        sum += arr[r]
-        if r < N - 1 {
-            r += 1
-        }
-    } else {
+    if sum >= M {
         sum -= arr[l]
-        if l < N - 1 {
-            l += 1
-        }
+        l += 1
+    } else if r == N { break }
+    else {
+        sum += arr[r]
+        r += 1
     }
     
-    if sum == M { result += 1}
+    if sum == M { result += 1 }
 }
 
 print(result)
